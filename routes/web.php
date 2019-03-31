@@ -12,12 +12,32 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('index');
 });
 
 Auth::routes();
 
 Route::get('/Forbidden','HomeController@forbidden');
+
+
+// Economie Route
+Route::get('/economie','HomeController@economie');
+
+// Tourisme Route
+Route::get('/tourisme','HomeController@tourisme');
+
+
+// Societe Route
+Route::get('/societe','HomeController@societe');
+
+
+// Culture Route
+Route::get('/culture','HomeController@culture');
+
+
+// Gazette Maritime
+Route::get('/gazettemaritime','HomeController@gazette_maritime');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 // Publisher Only Routes

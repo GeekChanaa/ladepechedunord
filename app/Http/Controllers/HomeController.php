@@ -29,4 +29,20 @@ class HomeController extends Controller
     public function forbidden(){
       return view('Forbidden');
     }
+
+    public function economie(){
+      return view('economie');
+    }
+    public function tourisme(){
+      return view('tourisme');
+    }
+    public function societe(){
+      return view('societe');
+    }
+    public function culture(){
+      return view('culture');
+    }
+    public function gazette_maritime(){
+      return view('gazettemaritime');
+    }
 }
