@@ -12,5 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Auth::routes();
+
+Route::get('/Forbidden','HomeController@forbidden');
+
+Route::get('/home', 'HomeController@index')->name('home');
+// Publisher Only Routes
+Route::group(['middleware'=>'publisher'],function(){
+  Route::get('/PublisherDashboard','PublisherController@index');
+});
+
+
+
+
+// Admin Only Routes
+Route::group(['middleware'=>'admin'],function(){
+  Route::get('/AdminDashboard','AdminController@index');
 });
