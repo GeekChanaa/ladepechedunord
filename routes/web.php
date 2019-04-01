@@ -40,9 +40,14 @@ Route::get('/gazettemaritime','HomeController@gazette_maritime');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
 // Publisher Only Routes
 Route::group(['middleware'=>'publisher'],function(){
   Route::get('/PublisherDashboard','PublisherController@index');
+  Route::get('/publisher/articles','PublisherController@articles');
+  Route::get('/publisher/addarticle','PublisherController@addarticle');
+  Route::post('/publisher/postarticle','PublisherController@postarticle');
 });
 
 
@@ -51,4 +56,6 @@ Route::group(['middleware'=>'publisher'],function(){
 // Admin Only Routes
 Route::group(['middleware'=>'admin'],function(){
   Route::get('/AdminDashboard','AdminController@index');
+  Route::get('/admin/users','AdminController@users');
+  Route::get('/admin/articles','AdminController@articles');
 });

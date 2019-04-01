@@ -16,7 +16,7 @@ class publisher
      */
     public function handle($request, Closure $next)
     {
-      if (Auth::user() &&  Auth::user()->rank == 'publisher') {
+      if (Auth::user() && ( Auth::user()->rank == 'publisher' || Auth::user()->rank=='admin' ) ) {
         return $next($request);
       }
       else {
