@@ -12,34 +12,50 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('home');
 });
+Route::get('/economie', function () {
+  return view('economie');
+});
+Route::get('/tourisme', function () {
+  return view('tourisme');
+});
+Route::get('/societe', function () {
+  return view('societe');
+});
+Route::get('/culture', function () {
+  return view('culture');
+});
+Route::get('/gazettemaritime', function () {
+  return view('gazettemaritime');
+});
+
+
 
 Auth::routes();
 
 Route::get('/Forbidden','HomeController@forbidden');
 
-
 // Economie Route
-Route::get('/economie','HomeController@economie');
+Route::get('/economie','HomeController@economie')->name('economie');
 
 // Tourisme Route
-Route::get('/tourisme','HomeController@tourisme');
+Route::get('/tourisme','HomeController@tourisme')->name('tourisme');
 
 
 // Societe Route
-Route::get('/societe','HomeController@societe');
+Route::get('/societe','HomeController@societe')->name('societe');
 
 
 // Culture Route
-Route::get('/culture','HomeController@culture');
+Route::get('/culture','HomeController@culture')->name('culture');
 
 
 // Gazette Maritime
-Route::get('/gazettemaritime','HomeController@gazette_maritime');
+Route::get('/gazettemaritime','HomeController@gazette_maritime')->name('gazettemaritime');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 
 // Publisher Only Routes
