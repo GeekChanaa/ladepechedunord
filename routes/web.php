@@ -37,25 +37,24 @@ Auth::routes();
 Route::get('/Forbidden','HomeController@forbidden');
 
 // Economie Route
-Route::get('/economie','HomeController@economie')->name('economie');
+Route::get('/economie','HomeController@economie');
 
 // Tourisme Route
-Route::get('/tourisme','HomeController@tourisme')->name('tourisme');
+Route::get('/tourisme','HomeController@tourisme');
 
 
 // Societe Route
-Route::get('/societe','HomeController@societe')->name('societe');
+Route::get('/societe','HomeController@societe');
 
 
 // Culture Route
-Route::get('/culture','HomeController@culture')->name('culture');
+Route::get('/culture','HomeController@culture');
 
 
 // Gazette Maritime
 Route::get('/gazettemaritime','HomeController@gazette_maritime')->name('gazettemaritime');
 
 
-Route::get('/', 'HomeController@index')->name('home');
 
 
 // Publisher Only Routes

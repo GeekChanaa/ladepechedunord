@@ -24,7 +24,7 @@
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="{{ ('TemplateBootstrap/css/animate.css')}}">
 	<!-- Icomoon Icon Fonts-->
@@ -68,12 +68,12 @@
 	<script src="{{ ('TemplateBootstrap/js/owl.carousel.min.js') }}"></script>
 	<!-- Sticky Kit -->
 	<script src="{{ ('TemplateBootstrap/js/sticky-kit.min.js') }}"></script>
-	
-	
+
+
 	<!-- MAIN JS -->
 	<script src="{{ ('TemplateBootstrap/js/main.js') }}"></script>
 
-	
+
     </head>
 <body>
 <div id="colorlib-page">
@@ -82,12 +82,12 @@
 			<h1 id="colorlib-logo"><a href="index.html">La Depeche Du Nord</a></h1>
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
-                @guest    
-                            <li class="{{ Request::is('/') ? 'colorlib-active' : '' }} "><a href="{{ route('home') }}">Home</a></li>
-                            <li class="{{ Request::is('societe') ? 'colorlib-active' : '' }} "><a href="{{ route('societe') }}">Societe</a></li>
-                            <li class="{{ Request::is('culture') ? 'colorlib-active' : '' }} "><a href="{{ route('culture') }}">Culture</a></li>
-                            <li class="{{ Request::is('economie') ? 'colorlib-active' : '' }} "><a href="{{ route('economie') }}">Economie</a></li>
-                            <li class="{{ Request::is('tourisme') ? 'colorlib-active' : '' }} "><a href="{{ route('tourisme') }}">Tourisme</a></li>
+                @guest
+                            <li class="{{ Request::is('/') ? 'colorlib-active' : '' }} "><a href="{{ url('/') }}">Home</a></li>
+                            <li class="{{ Request::is('societe') ? 'colorlib-active' : '' }} "><a href="{{ url('/societe') }}">Societe</a></li>
+                            <li class="{{ Request::is('culture') ? 'colorlib-active' : '' }} "><a href="{{ url('/culture') }}">Culture</a></li>
+                            <li class="{{ Request::is('economie') ? 'colorlib-active' : '' }} "><a href="{{ url('/economie') }}">Economie</a></li>
+                            <li class="{{ Request::is('tourisme') ? 'colorlib-active' : '' }} "><a href="{{ url('/tourisme') }}">Tourisme</a></li>
                             <li class="{{ Request::is('gazettemaritime') ? 'colorlib-active' : '' }} "><a href="{{ route('gazettemaritime') }}">Gazette Maritime</a></li>
                             <li class="{{ Request::is('login') ? 'colorlib-active' : '' }} "><a href="{{ route('login') }}">Login</a></li>
                             <li class="{{ Request::is('register') ? 'colorlib-active' : '' }} "><a href="{{ route('register') }}">Register</a></li>
@@ -98,7 +98,7 @@
                             <li class="{{ Request::is('economie') ? 'colorlib-active' : '' }} "><a href="{{ route('economie') }}">Economie</a></li>
                             <li class="{{ Request::is('tourisme') ? 'colorlib-active' : '' }} "><a href="{{ route('tourisme') }}">Tourisme</a></li>
                             <li class="{{ Request::is('gazettemaritime') ? 'colorlib-active' : '' }} "><a href="{{ route('gazettemaritime') }}">Gazette Maritime</a></li>
-                            <li class="{{ Request::is('logout') ? 'colorlib-active' : '' }} >
+                            <li class="{{ Request::is('logout') ? 'colorlib-active' : '' }}" >
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -114,6 +114,7 @@
 				</ul>
 			</nav>
 
+
 			<div class="colorlib-footer">
 				<p><small>
             | Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <br/> | Made by Bahnini Saad & Mohammed Chanaa
@@ -125,3 +126,30 @@
 					<li><a href="#"><i class="icon-linkedin2"></i></a></li>
 				</ul>
 			</div>
+		</aside>
+
+			@yield('content')
+		</div>
+
+			<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="js/jquery.waypoints.min.js"></script>
+<!-- Flexslider -->
+<script src="js/jquery.flexslider-min.js"></script>
+<!-- Magnific Popup -->
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/magnific-popup-options.js"></script>
+<!-- Owl Carousel -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- Sticky Kit -->
+<script src="js/sticky-kit.min.js"></script>
+
+
+<!-- MAIN JS -->
+<script src="js/main.js"></script>
+</div>
