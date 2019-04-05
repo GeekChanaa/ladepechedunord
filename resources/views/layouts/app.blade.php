@@ -88,16 +88,16 @@
                             <li class="{{ Request::is('culture') ? 'colorlib-active' : '' }} "><a href="{{ url('/culture') }}">Culture</a></li>
                             <li class="{{ Request::is('economie') ? 'colorlib-active' : '' }} "><a href="{{ url('/economie') }}">Economie</a></li>
                             <li class="{{ Request::is('tourisme') ? 'colorlib-active' : '' }} "><a href="{{ url('/tourisme') }}">Tourisme</a></li>
-                            <li class="{{ Request::is('gazettemaritime') ? 'colorlib-active' : '' }} "><a href="{{ route('gazettemaritime') }}">Gazette Maritime</a></li>
+                            <li class="{{ Request::is('gazettemaritime') ? 'colorlib-active' : '' }} "><a href="{{ url('/gazettemaritime') }}">Gazette Maritime</a></li>
                             <li class="{{ Request::is('login') ? 'colorlib-active' : '' }} "><a href="{{ route('login') }}">Login</a></li>
                             <li class="{{ Request::is('register') ? 'colorlib-active' : '' }} "><a href="{{ route('register') }}">Register</a></li>
                 @else
-                            <li class="{{ Request::is('/') ? 'colorlib-active' : '' }} "><a href="{{ route('home') }}">Home</a></li>
-                            <li class="{{ Request::is('societe') ? 'colorlib-active' : '' }} "><a href="{{ route('societe') }}">Societe</a></li>
-                            <li class="{{ Request::is('culture') ? 'colorlib-active' : '' }} "><a href="{{ route('culture') }}">Culture</a></li>
-                            <li class="{{ Request::is('economie') ? 'colorlib-active' : '' }} "><a href="{{ route('economie') }}">Economie</a></li>
-                            <li class="{{ Request::is('tourisme') ? 'colorlib-active' : '' }} "><a href="{{ route('tourisme') }}">Tourisme</a></li>
-                            <li class="{{ Request::is('gazettemaritime') ? 'colorlib-active' : '' }} "><a href="{{ route('gazettemaritime') }}">Gazette Maritime</a></li>
+                            <li class="{{ Request::is('/') ? 'colorlib-active' : '' }} "><a href="{{ url('/') }}">Home</a></li>
+                            <li class="{{ Request::is('societe') ? 'colorlib-active' : '' }} "><a href="{{ url('/societe') }}">Societe</a></li>
+                            <li class="{{ Request::is('culture') ? 'colorlib-active' : '' }} "><a href="{{ url('/culture') }}">Culture</a></li>
+                            <li class="{{ Request::is('economie') ? 'colorlib-active' : '' }} "><a href="{{ url('/economie') }}">Economie</a></li>
+                            <li class="{{ Request::is('tourisme') ? 'colorlib-active' : '' }} "><a href="{{ url('/tourisme') }}">Tourisme</a></li>
+                            <li class="{{ Request::is('gazettemaritime') ? 'colorlib-active' : '' }} "><a href="{{ url('/gazettemaritime') }}">Gazette Maritime</a></li>
                             <li class="{{ Request::is('logout') ? 'colorlib-active' : '' }}" >
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
