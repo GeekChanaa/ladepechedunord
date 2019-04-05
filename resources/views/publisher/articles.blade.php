@@ -11,6 +11,7 @@
     <th scope="col">Content </th>
     <th scope="col">Creation Date </th>
     <th scope="col">Update Date </th>
+    <th scope="col">Delete </th>
     @foreach($list_articles as $article)
     <tr>
       <td>{{$article->id}} </td>
@@ -18,6 +19,14 @@
       <td>{{$article->content}} </td>
       <td>{{$article->created_at}} </td>
       <td>{{$article->updated_at}} </td>
+      <td>
+        <form class="" action="{{url('/publisher/deletearticle')}}" method="post">
+          {{method_field('DELETE')}}
+          {{csrf_field()}}
+          <input type="hidden" name="id" value="{{$article->id}}">
+          <button class="btn btn-danger"> delete </button>
+        </form>
+       </td>
     </tr>
     @endforeach
   </table>

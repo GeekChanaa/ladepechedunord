@@ -14,7 +14,10 @@
     <link href="{{ asset('css/bootstrap-grid.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/bootstrap-reboot.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('dashboard.css') }}" rel="stylesheet">
     <script src="{{ asset('js/jquery.min.js') }}"> </script>
+    <script src="{{ asset('js/jquery.min.js') }}"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 </head>
 <body>
     <div id="app">
@@ -78,6 +81,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="{{ asset('js/dashboard.js') }}"> </script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
     <script src="{{ asset('js/dashboard.js') }}"></script>
